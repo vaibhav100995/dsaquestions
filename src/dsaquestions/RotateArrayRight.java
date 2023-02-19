@@ -1,5 +1,7 @@
 package dsaquestions;
 
+import java.util.Arrays;
+
 //Given an array, rotate the array to the right by k steps, where k is non-negative.
 //
 //
@@ -32,11 +34,10 @@ public class RotateArrayRight {
 
 	public static void main(String[] args) {
 		int[] nums = {1,2,3,4,5,6,7};
-		rotate(nums, 4);
-
+		System.out.println(Arrays.toString(rotate(nums, 4)));
 	}
 	
-	public static void rotate(int[] nums, int k) {
+	public static int[] rotate(int[] nums, int k) {
         int n=nums.length;
         int[] c = new int[n];
         for(int i=0;i<n;i++){
@@ -45,6 +46,7 @@ public class RotateArrayRight {
         for(int i = 0; i<n; i++){
             nums[i] = c[i];
         }
+        return nums;
     }
 
 }
