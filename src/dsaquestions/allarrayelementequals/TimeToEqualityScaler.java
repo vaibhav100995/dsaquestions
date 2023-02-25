@@ -35,7 +35,7 @@ package dsaquestions.allarrayelementequals;
 public class TimeToEqualityScaler {
 
 	public static void main(String[] args) {
-		int[] A = {2, 4, 1, 3, 2};
+		int[] A={2, 4, 1, 3, 2};
 		System.out.println(solve(A));
 		
 	}
