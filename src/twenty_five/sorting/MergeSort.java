@@ -16,7 +16,6 @@ public class MergeSort {
     * at end call merge function to join low to high
     * */
     private static void mergeSort(int arr[], int l, int r) {
-        // code here
         if(l>=r) return;
         int mid=(l+r)/2;
         mergeSort(arr,l,mid);
