@@ -31,12 +31,12 @@ public class MergeSort {
     * at end iterate on temp array from l->r and
     * insert temp array value into real arr array
     * */
-    private static void merge(int[] arr, int l, int mid, int r){
-        int temp[] = new int[r-l+1];
-        int left=l;
+    private static void merge(int[] arr, int low, int mid, int high){
+        int temp[] = new int[high-low+1];
+        int left=low;
         int right=mid+1;
         int i=0;
-        while(left<=mid && right<=r){
+        while(left<=mid && right<=high){
             if(arr[left]>arr[right]){
                 temp[i]=arr[right];
                 right++;
@@ -51,13 +51,13 @@ public class MergeSort {
             left++;
             i++;
         }
-        while(right<=r){
+        while(right<=high){
             temp[i]=arr[right];
             right++;
             i++;
         }
-        for(int j=l;j<=r;j++){
-            arr[j]=temp[j-l];
+        for(int j=low;j<=high;j++){
+            arr[j]=temp[j-low];
         }
     }
 }
