@@ -2,7 +2,7 @@ package pattern;
 
 public class FullPyramid {
     public static void main(String[] args) {
-        printPyramid(6,6);
+        printPyramid(5,5);
     }
 
     private static void printPyramid(int r, int c){
